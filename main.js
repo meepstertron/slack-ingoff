@@ -14,7 +14,7 @@ window.addEventListener('keydown', (e) => {
 
 window.addEventListener("load", () => {
   const tryInjectButton = () => {
-    const target = document.querySelector(".p-tab_rail__tab_container__context_target");
+    const target = document.querySelector(".p-tab_rail__tab_menu");
     if (!target) return setTimeout(tryInjectButton, 100);
 
     // Avoid adding multiple buttons
