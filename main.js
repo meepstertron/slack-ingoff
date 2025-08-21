@@ -53,8 +53,8 @@ window.addEventListener("load", () => {
 
     console.log("[Slack-ing off] button injected ✅");
 
-
-
+   
+    addButtonListeners();
   };
 
   const addButtonListeners = () => {
@@ -62,31 +62,30 @@ window.addEventListener("load", () => {
     if (!button) return;
 
     button.addEventListener("click", () => {
-        const child = window.open("", "", "width=600,height=400");
-        if (child) {
-          child.document.write(`
-            <!DOCTYPE html>
-            <html lang="en">
-            <head>
-              <meta charset="UTF-8">
-              <title>Config</title>
-              <style>
-                body { font-family: sans-serif; padding: 2em; background: #fafafa; }
-                h1 { color: #611f69; }
-              </style>
-            </head>
-            <body>
-              <h1>Test :D</h1>
-            </body>
-            </html>
-          `);
-          child.document.close();
-        }
+      const child = window.open("", "", "width=600,height=400");
+      if (child) {
+        child.document.write(`
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <title>Config</title>
+            <style>
+              body { font-family: sans-serif; padding: 2em; background: #fafafa; }
+              h1 { color: #611f69; }
+            </style>
+          </head>
+          <body>
+            <h1>Test :D</h1>
+          </body>
+          </html>
+        `);
+        child.document.close();
+      }
     });
   };
 
   tryInjectButton();
-  addButtonListeners();
 });
 
 
